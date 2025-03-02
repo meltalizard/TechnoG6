@@ -37,9 +37,10 @@ body {
 /* Styling for form inputs */
 .register-container input[type="text"],
 .register-container input[type="email"],
+.register-container input[type="tel"], /* Added phone number input */
 .register-container input[type="password"] {
     width: 100%;
-    padding: 12px;
+    padding: 12px 15px; /* Added horizontal padding */
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
@@ -50,6 +51,7 @@ body {
 /* Add focus effect to inputs */
 .register-container input[type="text"]:focus,
 .register-container input[type="email"]:focus,
+.register-container input[type="tel"]:focus, /* Added phone number focus */
 .register-container input[type="password"]:focus {
     border-color: #28a745;
     outline: none; /* Removes default browser outline */
