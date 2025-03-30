@@ -1,7 +1,8 @@
 /* General body styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4;
+    background-image: url("mainbackground.png");
+    background-color: #f8f9fa;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,8 +10,47 @@ body {
     margin: 0;
 }
 
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3F6C83;
+    padding: 3px 90px;
+}
+
+.maintitle {
+    margin: 0;
+    padding: 0;
+    padding-top: 0;
+    text-align: center;
+	width: 300px;
+	height: auto;
+}
+
+.content {
+    display: flex;
+	justify-content: space-between;
+	align-items: center;
+    margin: -10px;
+	padding: 15px 130px;
+}
+
+.login-description {
+    margin: 70px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
+}
+
 /* Styling for the login container */
 .login-container {
+    margin: 70px;
     background-color: #fff;
     padding: 25px;
     border-radius: 8px;
