@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Register</title>
+    <link rel="stylesheet" href="register.css"> <!-- Updated CSS file -->
+</head>
+<body>
+    <!-- Navbar with maintitle image -->
+    <div class="navbar">
+        <a href="home.html">
+            <img src="../Images/maintitle.png" class="maintitle" alt="Site Title">
+        </a>
+    </div>
+
+    <div class="content">
+        <!-- Optional: image or description area (similar to login) -->
+        <div class="register-description">
+            <img src="../Images/Dog1.png" alt="Description">
+        </div>
+
+        <div class="register-container">
+            <h2>Register</h2>
+            <form action="#" method="post">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
+
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
+
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
+
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <input type="submit" value="Register">
+            </form>
+            <p>Already have an account? <a href="login.html">Login here</a>.</p>
+        </div>
+    </div>
+</body>
+</html>
