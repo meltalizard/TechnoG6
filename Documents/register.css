@@ -2,6 +2,7 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
+    background-image: url("mainbackground.png"); /* Match login style */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -9,8 +10,37 @@ body {
     margin: 0;
 }
 
-/* Styling for the registration container */
-.register-container {
+/* Navbar styling */
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #3F6C83;
+    padding: 15px;
+}
+
+.maintitle {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Layout for content */
+.content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 100px;
+    padding: 15px 130px;
+}
+
+/* Optional side image area (like login-description) */
+.register-description {
+    margin: 70px;
     background-color: #fff;
     padding: 25px;
     border-radius: 8px;
@@ -19,13 +49,27 @@ body {
     text-align: center;
 }
 
-/* Styling for the heading */
+.register-description img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Styling for the registration container */
+.register-container {
+    margin: 70px;
+    background-color: #fff;
+    padding: 25px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    width: 320px;
+    text-align: center;
+}
+
 .register-container h2 {
     margin-bottom: 20px;
     color: #333;
 }
 
-/* Styling for form labels */
 .register-container label {
     display: block;
     text-align: left;
@@ -34,31 +78,28 @@ body {
     font-size: 14px;
 }
 
-/* Styling for form inputs */
 .register-container input[type="text"],
 .register-container input[type="email"],
-.register-container input[type="tel"], /* Added phone number input */
+.register-container input[type="tel"],
 .register-container input[type="password"] {
     width: 100%;
-    padding: 12px 15px; /* Added horizontal padding */
+    padding: 12px 15px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    box-sizing: border-box;
 }
 
-/* Add focus effect to inputs */
 .register-container input[type="text"]:focus,
 .register-container input[type="email"]:focus,
-.register-container input[type="tel"]:focus, /* Added phone number focus */
+.register-container input[type="tel"]:focus,
 .register-container input[type="password"]:focus {
     border-color: #28a745;
-    outline: none; /* Removes default browser outline */
+    outline: none;
     box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
 }
 
-/* Styling for the submit button */
 .register-container input[type="submit"] {
     width: 100%;
     padding: 12px;
@@ -75,7 +116,6 @@ body {
     background-color: #218838;
 }
 
-/* Styling for the "Login here" link */
 .register-container p {
     margin-top: 15px;
     color: #555;

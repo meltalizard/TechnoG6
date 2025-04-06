@@ -4,31 +4,44 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Register</title>
-    <link rel="stylesheet" href="register.css"> <!-- Link to the CSS file -->
+    <link rel="stylesheet" href="register.css"> <!-- Updated CSS file -->
 </head>
 <body>
-    <img src="../Images/Dog1.png" alt="Description">
-    <div class="register-container">
-        <h2>Register</h2>
-        <form action="#" method="post">
-            <label for="username">Username</label>
-            <input type="text" id="username" name="username" required>
+    <!-- Navbar with maintitle image -->
+    <div class="navbar">
+        <a href="home.html">
+            <img src="../Images/maintitle.png" class="maintitle" alt="Site Title">
+        </a>
+    </div>
 
-            <label for="email">Email</label>
-            <input type="email" id="email" name="email" required>
+    <div class="content">
+        <!-- Optional: image or description area (similar to login) -->
+        <div class="register-description">
+            <img src="../Images/Dog1.png" alt="Description">
+        </div>
 
-            <label for="phone">Phone Number</label>
-            <input type="tel" id="phone" name="phone" required>
+        <div class="register-container">
+            <h2>Register</h2>
+            <form action="#" method="post">
+                <label for="username">Username</label>
+                <input type="text" id="username" name="username" required>
 
-            <label for="password">Password</label>
-            <input type="password" id="password" name="password" required>
+                <label for="email">Email</label>
+                <input type="email" id="email" name="email" required>
 
-            <label for="confirm-password">Confirm Password</label>
-            <input type="password" id="confirm-password" name="confirm-password" required>
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" required>
 
-            <input type="submit" value="Register">
-        </form>
-        <p>Already have an account? <a href="login.html">Login here</a>.</p>
+                <label for="password">Password</label>
+                <input type="password" id="password" name="password" required>
+
+                <label for="confirm-password">Confirm Password</label>
+                <input type="password" id="confirm-password" name="confirm-password" required>
+
+                <input type="submit" value="Register">
+            </form>
+            <p>Already have an account? <a href="login.html">Login here</a>.</p>
+        </div>
     </div>
 </body>
 </html>
