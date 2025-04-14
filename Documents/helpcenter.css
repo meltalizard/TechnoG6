@@ -1,0 +1,18 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-image: url("mainbackground.png");
+    background-color: #f8f9fa;
+}
+.navbar {
+    background-color: #3F6C83;
+    padding: 15px;
+    text-align: center;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin: 15px;
+    font-size: 18px;
+}
