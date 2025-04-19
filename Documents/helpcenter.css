@@ -1,18 +1,42 @@
-body {
-    font-family: Arial, sans-serif;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
     background-image: url("mainbackground.png");
     background-color: #f8f9fa;
 }
+
+/* Flex container to stretch full page */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar styles */
 .navbar {
     background-color: #3F6C83;
-    padding: 15px;
+    padding: 20px 0;
     text-align: center;
+}
+.navbar-links {
+    display: flex;
+    justify-content: center;
+    gap: 25px;
+    flex-wrap: wrap;
 }
 .navbar a {
     color: white;
     text-decoration: none;
-    margin: 15px;
     font-size: 18px;
+}
+
+/* Footer sticks to bottom */
+.footer {
+    background-color: #2f6f89;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
 }

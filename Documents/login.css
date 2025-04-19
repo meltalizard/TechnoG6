@@ -3,25 +3,26 @@ body {
     font-family: Arial, sans-serif;
     background-image: url("mainbackground.png");
     background-color: #f8f9fa;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
     margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
+/* Navbar styling */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    display: flex; /* <-- ADD THIS */
+    display: flex;
     justify-content: space-between;
     align-items: center;
     background-color: #3F6C83;
     padding: 15px;
+    z-index: 1000;
 }
-
 
 .maintitle {
     cursor: pointer;
@@ -29,15 +30,16 @@ body {
     height: auto;
 }
 
-
+/* Main content layout */
 .content {
     display: flex;
-	justify-content: space-between;
-	align-items: center;
-    margin: -10px;
-	padding: 15px 130px;
+    justify-content: space-between;
+    align-items: center;
+    padding: 130px 130px 80px; /* top padding to avoid navbar, bottom for footer */
+    flex: 1;
 }
 
+/* Login description section */
 .login-description {
     margin: 70px;
     background-color: #fff;
@@ -48,7 +50,7 @@ body {
     text-align: center;
 }
 
-/* Styling for the login container */
+/* Login container styles */
 .login-container {
     margin: 70px;
     background-color: #fff;
@@ -59,13 +61,11 @@ body {
     text-align: center;
 }
 
-/* Styling for the heading */
 .login-container h2 {
     margin-bottom: 20px;
     color: #333;
 }
 
-/* Styling for form labels */
 .login-container label {
     display: block;
     text-align: left;
@@ -74,27 +74,24 @@ body {
     font-size: 14px;
 }
 
-/* Styling for form inputs */
 .login-container input[type="text"],
 .login-container input[type="password"] {
     width: 100%;
-    padding: 12px 15px; /* Increased horizontal padding */
+    padding: 12px 15px;
     margin-bottom: 20px;
     border: 1px solid #ccc;
     border-radius: 4px;
     font-size: 16px;
-    box-sizing: border-box; /* Ensures padding doesn't affect width */
+    box-sizing: border-box;
 }
 
-/* Add focus effect to inputs */
 .login-container input[type="text"]:focus,
 .login-container input[type="password"]:focus {
     border-color: #28a745;
-    outline: none; /* Removes default browser outline */
+    outline: none;
     box-shadow: 0 0 5px rgba(40, 167, 69, 0.5);
 }
 
-/* Styling for the submit button */
 .login-container input[type="submit"] {
     width: 100%;
     padding: 12px;
@@ -111,7 +108,6 @@ body {
     background-color: #218838;
 }
 
-/* Styling for the "Register here" link */
 .login-container p {
     margin-top: 15px;
     color: #555;
@@ -126,4 +122,18 @@ body {
 
 .login-container a:hover {
     text-decoration: underline;
+}
+
+/* Footer styling */
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #3F6C83;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    z-index: 1000;
 }

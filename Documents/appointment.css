@@ -1,18 +1,53 @@
-body {
-    font-family: Arial, sans-serif;
+html, body {
+    height: 100%;
     margin: 0;
     padding: 0;
+    font-family: Arial, sans-serif;
     background-image: url("mainbackground.png");
     background-color: #f8f9fa;
 }
+
+/* Flex container for full-page layout */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+/* Navbar styling */
 .navbar {
     background-color: #3F6C83;
-    padding: 15px;
+    padding: 15px 20px;
     text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.navbar-top {
+    margin-bottom: 10px;
+}
+.navbar-links {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 15px;
 }
 .navbar a {
     color: white;
     text-decoration: none;
-    margin: 15px;
     font-size: 18px;
+}
+.maintitle {
+    width: 300px;
+    height: auto;
+    cursor: pointer;
+}
+
+/* Footer stays at bottom */
+.footer {
+    background-color: #2f6f89;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
 }
