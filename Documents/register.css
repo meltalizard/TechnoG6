@@ -12,16 +12,12 @@ body {
 
 /* Navbar styling */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: #3F6C83;
     padding: 15px;
-    z-index: 1000;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
 }
 
 .maintitle {
@@ -133,7 +129,6 @@ body {
     text-decoration: underline;
 }
 
-/* Optional fixed footer styling */
 .footer {
     position: fixed;
     bottom: 0;
