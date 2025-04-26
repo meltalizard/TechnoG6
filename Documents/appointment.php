@@ -31,3 +31,22 @@
 
     <input type="submit" value="Register">
 </form>
+
+<form action="schedule_appointment.php" method="POST">
+    <label for="appointment_date">Appointment Date:</label>
+    <input type="datetime-local" name="appointment_date" required><br>
+
+    <label for="description">Description:</label>
+    <textarea name="description" required></textarea><br>
+
+    <label for="clinic">Select Clinic:</label>
+    <select name="clinic" required>
+        <option value="Clinic 1">Clinic 1</option>
+        <option value="Clinic 2">Clinic 2</option>
+        <option value="Clinic 3">Clinic 3</option>
+        <option value="Clinic 4">Clinic 4</option>
+        <option value="Clinic 5">Clinic 5</option>
+    </select><br>
+
+    <input type="submit" value="Schedule Appointment">
+</form>
