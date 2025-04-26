@@ -1,48 +1,25 @@
 <?php
-// Database connection
-$servername = "localhost"; // Change if necessary
-$username = "your_db_username"; // Your database username
-$password = "your_db_password"; // Your database password
-$dbname = "your_db_name"; // Your database name
-
-$conn = new mysqli($servername, $username, $password, $dbname);
-
-// Check connection
-if ($conn->connect_error) {
-    die("Connection failed: " . $conn->connect_error);
-}
-
-// Check if form is submitted
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $username = $_POST['username'];
     $email = $_POST['email'];
-    $phone = $_POST['phone'];
+    $pnumber = $_POST['pnumber'];
     $password = $_POST['password'];
-    $confirm_password = $_POST['confirm-password'];
+    $confirm_password = $_POST['confirm_password'];
 
-    // Validate input
+    // Check if passwords match
     if ($password !== $confirm_password) {
         echo "Passwords do not match.";
-        exit;
-    }
-
-    // Hash the password
-    $hashed_password = password_hash($password, PASSWORD_DEFAULT);
-
-    // Prepare and bind
-    $stmt = $conn->prepare("INSERT INTO users (username, email, phone, password) VALUES (?, ?, ?, ?)");
-    $stmt->bind_param("ssss", $username, $email, $phone, $hashed_password);
-
-    // Execute the statement
-    if ($stmt->execute()) {
-        echo "Registration successful!";
     } else {
-        echo "Error: " . $stmt->error;
+        // Hash the password
+        $hashed_password = password_hash($password, PASSWORD_DEFAULT);
+
+        // Insert into the database (assuming you have a connection $conn)
+        $sql = "INSERT INTO signup (username, email, pnumber, password) VALUES (?, ?, ?, ?)";
+        $stmt = $conn->prepare($sql);
+        $stmt->bind_param("ssss", $username, $email, $pnumber, $hashed_password);
+        $stmt->execute();
+        
+        echo "Signup successful!";
     }
-
-    // Close the statement and connection
-    $stmt->close();
 }
-
-$conn->close();
 ?>
