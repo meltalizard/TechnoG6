@@ -1,19 +1,24 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Care | Home</title>
     <link rel="stylesheet" href="home.css">
 </head>
+
 <body>
+
     <div class="wrapper">
+
         <div class="navbar">
             <div class="navbar-top">
                 <a href="home.html">
                     <img src="../Images/maintitle.png" class="maintitle" alt="Site Title">
                 </a>
             </div>
+
             <div class="navbar-links">
                 <a href="home.html">Home</a>
                 <a href="appointment.html">Create an Appointment</a>
@@ -23,11 +28,60 @@
             </div>
         </div>
 
-        <!-- Optional content here -->
+        <!-- Registration and Appointment Scheduling Form -->
+        <h1>Register and Schedule Appointment</h1>
 
-        <div class="footer">
-            <p>&copy; 2025 Pet Care Services. All rights reserved.</p>
-        </div>
-    </div>
+        <form action="register_and_schedule.php" method="POST">
+
+            <label for="username">Username:</label><br>
+            <input type="text" id="username" name="username" required><br><br>
+
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br><br>
+
+            <label for="pnumber">Phone Number:</label><br>
+            <input type="text" id="pnumber" name="pnumber" required><br><br>
+
+            <label for="password">Password:</label><br>
+            <input type="password" id="password" name="password" required><br><br>
+
+            <label for="street_address">Street Address:</label><br>
+            <input type="text" id="street_address" name="street_address" required><br><br>
+
+            <label for="apartment_unit_suite">Apartment/Unit/Suite (Optional):</label><br>
+            <input type="text" id="apartment_unit_suite" name="apartment_unit_suite"><br><br>
+
+            <label for="barangay">Barangay:</label><br>
+            <input type="text" id="barangay" name="barangay" required><br><br>
+
+            <label for="city_municipality">City / Municipality:</label><br>
+            <input type="text" id="city_municipality" name="city_municipality" required><br><br>
+
+            <label for="province">Province:</label><br>
+            <input type="text" id="province" name="province" required><br><br>
+
+            <label for="postal_code">Postal Code:</label><br>
+            <input type="text" id="postal_code" name="postal_code" required><br><br>
+
+            <label for="appointment_date">Appointment Date:</label><br>
+            <input type="datetime-local" id="appointment_date" name="appointment_date" required><br><br>
+
+            <label for="description">Description:</label><br>
+            <textarea id="description" name="description" required></textarea><br><br>
+
+            <label for="clinic">Select Clinic:</label><br>
+            <select id="clinic" name="clinic" required>
+                <option value="Clinic 1">Clinic 1</option>
+                <option value="Clinic 2">Clinic 2</option>
+                <option value="Clinic 3">Clinic 3</option>
+                <option value="Clinic 4">Clinic 4</option>
+                <option value="Clinic 5">Clinic 5</option>
+            </select><br><br>
+
+            <input type="submit" value="Register and Schedule Appointment">
+        </form>
+
+    </div> <!-- Closing the wrapper -->
+    
 </body>
 </html>
