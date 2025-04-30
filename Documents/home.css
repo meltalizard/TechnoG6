@@ -3,7 +3,7 @@ html, body {
     margin: 0;
     padding: 0;
     font-family: Arial, sans-serif;
-    background-image: url("mainbackground.png");
+    background: url('/Images/mainbackground.png') repeat;
     background-color: #f8f9fa;
 }
 
@@ -38,6 +38,7 @@ html, body {
     height: auto;
 }
 .hero {
+    color: white;
     text-align: center;
     padding: 50px;
     background-color: #5F98B5;
