@@ -18,7 +18,7 @@ body {
     align-items: center;
 }
 .navbar a {
-    color: white;
+    color: rgb(241, 241, 241);
     text-decoration: none;
     margin-left: 20px;
     font-size: 18px;
