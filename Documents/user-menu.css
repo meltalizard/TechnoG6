@@ -1,0 +1,75 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('../Images/mainbackground.png') repeat;
+    background-color: #f8f9fa;
+}
+
+/* NEW: Wrapper for full height layout */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: #3F6C83;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+.maintitle {
+    cursor: pointer;
+    width: 300px;
+    height: auto;
+}
+.title {
+    text-align: center;
+}
+.hero {
+    width: 400px;
+}
+
+.menu-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 4px;
+    flex-wrap: wrap;
+}
+.options {
+    margin: 9px;
+    background: white;
+    padding: 19x;
+    text-align: center;
+    border-radius: 10px;
+    height: 200px;
+    width: 200px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+.option-image {
+    width: 118px;
+}
+
+.footer {
+    background-color: #2f6f89;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
