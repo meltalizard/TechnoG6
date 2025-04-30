@@ -1,38 +1,67 @@
 html, body {
-    height: 100%;
+    font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background-image: url("mainbackground.png");
-    background-color: #f8f9fa;
+    background: url('/Images/mainbackground.png') repeat;
+    background-color: #ffffff;
 }
 
-/* Flex container to stretch full page */
-.wrapper {
-    min-height: 100vh;
-    display: flex;
-    flex-direction: column;
-}
-
-/* Navbar styles */
 .navbar {
     background-color: #3F6C83;
-    padding: 20px 0;
-    text-align: center;
-}
-.navbar-links {
+    padding: 15px;
     display: flex;
-    justify-content: center;
-    gap: 25px;
-    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+.navbar-left {
+    display: flex;
+    align-items: center;
 }
 .navbar a {
     color: white;
     text-decoration: none;
+    margin-left: 20px;
     font-size: 18px;
 }
+.maintitle {
+    cursor: pointer;
+    width: 300px;
+    height: auto;
+}
+.hero {
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+    padding: 5px;
+    background-color: #5F98B5;
+}
 
-/* Footer sticks to bottom */
+.help-center-cat {    
+    width: 500px;
+}
+
+.faq {
+    text-align: center;
+}
+
+.questions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 20px;
+    padding: 20px;
+
+}
+
+.q-1, .q-2, .q-3 {
+    margin: 12px;
+    text-align: center;
+    width: 700px;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.486);
+}
+
+
 .footer {
     background-color: #2f6f89;
     color: white;
