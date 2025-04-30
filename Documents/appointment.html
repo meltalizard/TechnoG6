@@ -1,38 +1,34 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Care | Home</title>
-    <link rel="stylesheet" href="home.css">
+    <link href="appointment.css" rel="stylesheet" type="text/css">
 </head>
-
 <body>
-
-    <div class="wrapper">
-
-        <div class="navbar">
-            <div class="navbar-top">
-                <a href="home.html">
-                    <img src="../Images/maintitle.png" class="maintitle" alt="Site Title">
-                </a>
-            </div>
-
-            <div class="navbar-links">
-                <a href="home.html">Home</a>
-                <a href="appointment.html">Create an Appointment</a>
-                <a href="helpcenter.html">Help Center</a>
-                <a href="register.html">Sign Up</a>
-                <a href="login.html">Login</a>
-            </div>
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="home.html">
+                <img src="../Images/maintitle.png" class="maintitle" alt="Logo">
+            </a>
         </div>
+        <div class="navbar-right">
+            <a href="home.html">Home</a>
+            <a href="appointment.html">Create an Appointment</a>
+            <a href="helpcenter.html">Help Center</a>
+            <a href="register.html">Sign Up</a>
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+    
 
-        <!-- Registration and Appointment Scheduling Form -->
-        <h1>Register and Schedule Appointment</h1>
-
-        <form action="register_and_schedule.php" method="POST">
-
+    <div class="hero">
+        <h1>Create an Appointment</h1>
+    </div>
+    <form action="register_and_schedule.php" method="POST">
+    <div class="services">
+        <div class="create-an-appointment">
             <label for="username">Username:</label><br>
             <input type="text" id="username" name="username" required><br><br>
 
@@ -53,7 +49,8 @@
 
             <label for="barangay">Barangay:</label><br>
             <input type="text" id="barangay" name="barangay" required><br><br>
-
+        </div>
+        <div class="create-an-appointment">
             <label for="city_municipality">City / Municipality:</label><br>
             <input type="text" id="city_municipality" name="city_municipality" required><br><br>
 
@@ -77,11 +74,15 @@
                 <option value="Clinic 4">Clinic 4</option>
                 <option value="Clinic 5">Clinic 5</option>
             </select><br><br>
-
-            <input type="submit" value="Register and Schedule Appointment">
-        </form>
-
-    </div> <!-- Closing the wrapper -->
-    
+        </div>
+    </div>
+    <div class="register-button">
+        <input type="submit" value="Register and Schedule Appointment" class="button">
+    </div>
+</form>
+    <div class="footer">
+        <p>&copy; 2025 Pet Care Services. All rights reserved.</p>
+    </div>
 </body>
+
 </html>
