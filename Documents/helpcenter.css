@@ -2,7 +2,7 @@ html, body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background: url('/Images/mainbackground.png') repeat;
+    background: url('../Images/mainbackground.png') repeat;
     background-color: #ffffff;
 }
 
