@@ -2,25 +2,22 @@
 body {
     font-family: Arial, sans-serif;
     background-color: #f4f4f4;
-    background-image: url("mainbackground.png"); /* Match login style */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+    background-image: url("mainbackground.png");
     margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* Navbar styling */
 .navbar {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
     background-color: #3F6C83;
     padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
 }
 
 .maintitle {
@@ -34,11 +31,11 @@ body {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-top: 100px;
-    padding: 15px 130px;
+    padding: 130px 130px 80px; /* space for navbar and optional footer */
+    flex: 1;
 }
 
-/* Optional side image area (like login-description) */
+/* Optional side image area */
 .register-description {
     margin: 70px;
     background-color: #fff;
@@ -130,4 +127,17 @@ body {
 
 .register-container a:hover {
     text-decoration: underline;
+}
+
+.footer {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: #3F6C83;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    font-size: 14px;
+    z-index: 1000;
 }
