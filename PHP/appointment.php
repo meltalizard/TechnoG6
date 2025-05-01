@@ -1,4 +1,5 @@
 <?php
+session_start();
 // Database connection
 $servername = "localhost"; // Change as needed
 $username = "root"; // Change as needed
