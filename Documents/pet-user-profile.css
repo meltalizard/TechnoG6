@@ -36,9 +36,38 @@ body {
     padding: 40px;
 }
 
-.pet-profile {
+.profile-picture {
+    
+    margin-bottom: 17px;
+    width: 80px;
+ }
+
+ .info {
+    display: flex;
+    justify-content: center;
+
     color:#ffffff;
-    font-size: 17px;
+ }
+
+.deets {
+    text-align: left;
+    width: 100px;
+    font-size: 19px;
+    font-weight: 800;
+
+}
+
+.response {
+    text-align: center;
+    width: 100px;
+    font-size: 19px;
+}
+
+
+
+.profile-box {
+
+
     background: rgba(32, 118, 139, 0.418);
     padding: 20px;
     text-align: center;
@@ -46,15 +75,6 @@ body {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.555);
 }
 
-.user-profile {
-    color:#ffffff;
-    font-size: 17px;
-    background: rgba(32, 118, 139, 0.418);
-    padding: 20px;
-    text-align: center;
-    width: 300px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.555);
-}
 
 .profile-updated {
     color: rgb(24, 172, 56);
