@@ -37,6 +37,7 @@ body {
 }
 
 .pet-profile {
+    color:#ffffff;
     font-size: 17px;
     background: rgba(32, 118, 139, 0.418);
     padding: 20px;
@@ -46,6 +47,7 @@ body {
 }
 
 .user-profile {
+    color:#ffffff;
     font-size: 17px;
     background: rgba(32, 118, 139, 0.418);
     padding: 20px;
