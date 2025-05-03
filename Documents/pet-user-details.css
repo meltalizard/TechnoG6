@@ -1,0 +1,132 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('../Images/mainbackground.png') repeat;
+    background-color: #f8f9fa;
+}
+
+/* Wrapper for full height layout */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: #3F6C83;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.maintitle {
+    cursor: pointer;
+    width: 300px;
+    height: auto;
+}
+
+.title {
+    text-align: center;
+}
+
+.hero {
+    width: 400px;
+}
+
+.menu-options {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 4px;
+    flex-wrap: wrap;
+}
+
+.options {
+    margin: 9px;
+    background: white;
+    padding: 19px; /* Fixed the typo from '19x' to '19px' */
+    text-align: center;
+    border-radius: 10px;
+    height: auto; /* Changed from fixed height to auto */
+    width: 200px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+.option-image {
+    width: 118px;
+}
+
+/* New styles for info sections */
+.info-section {
+    margin-top: 10px;
+    text-align: left;
+}
+
+.info-row {
+    margin: 8px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.label {
+    font-weight: bold;
+    margin-right: 5px;
+}
+
+.value {
+    flex-grow: 1;
+    margin: 0 5px;
+    min-height: 1em;
+    border-bottom: 1px dashed #ccc;
+}
+
+.edit {
+    cursor: pointer;
+    color: #3F6C83;
+}
+
+/* Action buttons area */
+.action-buttons {
+    display: flex;
+    justify-content: center;
+    margin: 20px 0;
+}
+
+.add-pet-btn {
+    background-color: #3F6C83;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.add-pet-btn:hover {
+    background-color: #2f6f89;
+}
+
+.footer {
+    background-color: #2f6f89;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
