@@ -52,15 +52,48 @@ body {
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.555);
 }
 
-.first-row {
-    border-collapse: collapse;
+.table-itself {
+    margin: 100px;
+    text-align: center;
+    color: #ffffff;
+    display: flex;
+    flex-direction: column;
+    background-color: #000000;
 
 }
 
-.table-header {
-    text-align: center;
-    background-color: rgb(0, 0, 0);
-    color: #ffffff;
+.first-row {
+    height: 42px;
+    font-size: 12px;
+}
+
+.table-body {
+    background-color: #000000;
+    align-items: center;
+    font-size: 17px;
+}
+
+.row0, .row1 {
+    margin: 1px;
+    display: flex;
+    background-color: #000000;
+    color:#000000;
+    gap: 1px;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.left {
+    width: 400px;
+    background-color: #eeeeee;
+    padding-inline: 5px;
+}
+
+.right {
+    padding-left: 10px;
+    background-color: #ffffff;
+    width: 899px;
+    text-align: left;
+    font-weight: 700;
 }
 
 .footer {
