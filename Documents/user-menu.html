@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Care | Home</title>
     <link rel="stylesheet" href="user-menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
 </head>
 <body>
     <div class="wrapper">
@@ -13,6 +14,9 @@
                 <a href="home.html">
                     <img src="../Images/maintitle.png" class="maintitle" alt="Logo" title="Pet Care Services Logo">
                 </a>
+            </div>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
             </div>
             <div class="navbar-right">
                 <a href="home.html" title="Home Page">Home</a>
@@ -52,5 +56,17 @@
         <p>&copy; 2025 Pet Care Services. All rights reserved.</p>
     </div>
 </div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const navbarRight = document.querySelector('.navbar-right');
+        
+        hamburgerMenu.addEventListener('click', function() {
+            navbarRight.classList.toggle('active');
+            hamburgerMenu.classList.toggle('active');
+        });
+    });
+</script>
 </body>
 </html>
