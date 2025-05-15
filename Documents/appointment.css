@@ -53,14 +53,21 @@ body {
 }
 
 .register-button {
-    text-align: center;    
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
 }
 
 .button {
     font-size: 18px;
-    color: rgb(255, 255, 255);
-    background:rgba(58, 102, 182, 0.555);
-
+    color: #ffffff;
+    background: #1fa1c9;
+    padding: 10px 64px;
+    text-align: center;
+    cursor: pointer;
+    height: 50px;
 }
 
 .footer {
