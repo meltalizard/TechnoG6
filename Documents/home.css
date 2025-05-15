@@ -210,6 +210,11 @@ body {
         border-bottom: none;
     }
 
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+
     .side-elements {
         right: 10px;
     }
