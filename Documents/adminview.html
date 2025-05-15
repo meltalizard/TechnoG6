@@ -3,47 +3,63 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pet Care | Home</title>
-    <link rel="stylesheet" href="home.css">
+    <title>Appointment Details</title>
+    <link rel="stylesheet" href="appointment-details.css">
 </head>
 <body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="home.html">
+                <img src="../Images/maintitle.png" class="maintitle" alt="Logo">
+            </a>
+        </div>
+        <div class="menu-button" id="menu-button">
+            <img src="../Images/menuicon.png" alt="Menu">
+        </div>
+        <div class="navbar-right" id="navbar-links">
+            <a href="home.html">Home</a>
+            <a href="appointment.html">Create an Appointment</a>
+            <a href="helpcenter.html">Help Center</a>
+            <a href="login.html">Log out</a>
+        </div>
+    </div>
+    
+    <div class="hero">
+        <h3>Dashboard</h3>
+    </div>
+
     <div class="wrapper">
-        <div class="navbar">
-            <div class="navbar-left">
-                <a href="home.html">
-                    <img src="../Images/maintitle.png" class="maintitle" alt="Logo">
-                </a>
-            </div>
-            <div class="navbar-right">
-                <a href="home.html">Home</a>
-                <a href="appointment.html">Create an Appointment</a>
-                <a href="helpcenter.html">Help Center</a>
-                <a href="register.html">Sign Up</a>
-                <a href="login.html">Login</a>
-            </div>
-        </div>
-<div class="hero">
-    <h1>
-            Dashboard
-    </h1>
-</div>
-<div>
-    <div class="left">
-
-    </div>
-
-    <div class="middle">
-
-    </div>
-
-    <div class="right">
-
-    </div>
-</div>
-
-        <div class="footer">
-            <p>&copy; 2025 Pet Care Services. All rights reserved.</p>
+        <div class="table-itself">
         </div>
     </div>
+   
+    <div class="footer">
+        <p>&copy; 2025 Pet Care Services. All rights reserved.</p>
+        <div>
+            <a href="https://facebook.com/Paws-and-Purposes" target="_blank">
+                <img src="../Images/fb-logo.png" class="fb-logo" title="fb-logo" alt="Facebook">
+            </a>
+            <a href="https://github.com/TechnoG6" target="_blank">
+                <img src="../Images/githublogo.png" class="fb-logo" title="github-logo" alt="GitHub">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to toggle mobile menu
+        document.getElementById('menu-button').addEventListener('click', function() {
+            document.getElementById('navbar-links').classList.toggle('active');
+        });
+       
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menuButton = document.getElementById('menu-button');
+            const navbarLinks = document.getElementById('navbar-links');
+           
+            if (!menuButton.contains(event.target) && !navbarLinks.contains(event.target)) {
+                navbarLinks.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>

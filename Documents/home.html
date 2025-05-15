@@ -8,22 +8,24 @@
 </head>
 <body>
     <div class="wrapper">
-        <div class="navbar">
-            <div class="navbar-left">
-                <a href="home.html">
-                    <img src="../Images/maintitle.png" class="maintitle" alt="Logo">
-                </a>
-            </div>
-            <div class="navbar-right">
-                <a href="home.html">Home</a>
-                <a href="appointment.html">Create an Appointment</a>
-                <a href="helpcenter.html">Help Center</a>
-                <a href="register.html">Sign Up</a>
-                <a href="login.html">Login</a>
-            </div>
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="home.html">
+                <img src="../Images/maintitle.png" class="maintitle" alt="Logo">
+            </a>
         </div>
+        <div class="menu-button" id="menu-button">
+            <img src="../Images/hamburger-symbol.PNG" alt="Menu">
+        </div>
+        <div class="navbar-right" id="navbar-links">
+            <a href="home.html">Home</a>
+            <a href="appointment.html">Create an Appointment</a>
+            <a href="helpcenter.html">Help Center</a>
+            <a href="login.html">Log out</a>
+        </div>
+    </div>
 <div>
-    <img src="" class="pet-design" title="Petd-design">
+
 </div>
         <div class="hero">
             <h1>Welcome to Pet Care Services</h1>
@@ -63,5 +65,24 @@
             <img src="../Images/staricon.png" alt="Feedback">
         </div>
     </div>
+
+
+    <script>
+        // JavaScript to toggle mobile menu
+        document.getElementById('menu-button').addEventListener('click', function() {
+            document.getElementById('navbar-links').classList.toggle('active');
+        });
+       
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menuButton = document.getElementById('menu-button');
+            const navbarLinks = document.getElementById('navbar-links');
+           
+            if (!menuButton.contains(event.target) && !navbarLinks.contains(event.target)) {
+                navbarLinks.classList.remove('active');
+            }
+        });
+    </script>
+
 </body>
 </html>
