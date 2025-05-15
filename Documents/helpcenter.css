@@ -34,12 +34,15 @@ html, body {
     padding: 5px;
     background-color: #5F98B5;
 }
+
 .help-center-cat {    
     width: 500px;
 }
+
 .faq {
     text-align: center;
 }
+
 .questions {
     display: flex;
     flex-direction: column;
@@ -55,14 +58,23 @@ html, body {
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.486);
 }
 .footer {
-    background-color: #2f6f89;
+    background-color: #5F98B5;
     color: white;
     text-align: center;
-    padding: 10px 0;
+    padding: 15px;
     margin-top: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 15px;
 }
 
-/* Social media icons in footer */
+.footer p {
+    margin: 0;
+    margin-right: 15px;
+}
+
 .fb-logo {
     width: 30px;
     height: 30px;
@@ -74,7 +86,6 @@ html, body {
     transform: scale(1.2);
 }
 
-/* Side elements container styling */
 .side-elements {
     position: fixed;
     right: 20px;
@@ -85,6 +96,7 @@ html, body {
     gap: 15px;
     z-index: 100;
 }
+
 .side-element {
     background-color: #3F6C83;
     color: white;
@@ -94,18 +106,149 @@ html, body {
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: none;
 }
-.side-element:hover {
-    background-color: #5F98B5;
-    transform: translateX(-5px);
-}
-.side-element img {
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
-}
+
 .side-element p {
     margin: 0;
     font-weight: bold;
+}
+
+.menu-button {
+    display: none;
+    cursor: pointer;
+}
+
+.menu-button img {
+    width: 30px;
+    height: 30px;
+}
+
+.star-icon-wrapper {
+    position: fixed;
+    right: 20px;
+    top: 60%;
+    transform: translateY(300%);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 110;
+}
+
+.star-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.feedback-buttons {
+    display: none;
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.star-icon-wrapper:hover .feedback-buttons {
+    display: flex;
+}
+
+.live-agent-btn,
+.feedback-btn {
+    background-color: #3F6C83;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
+@media (max-width: 768px) {
+    .help-center-cat {    
+    width: 400px;
+    }
+
+    .q-1, .q-2, .q-3 {
+    margin: 12px;
+    text-align: center;
+    width: 400px;
+    background: #ffffff;
+    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.486);
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    .navbar-right {
+        display: none;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        background-color: #3F6C83;
+        width: 100%;
+        flex-direction: column;
+        padding: 10px 0;
+        z-index: 100;
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    }
+
+    .navbar-right.active {
+        display: flex;
+    }
+
+    .navbar-right a {
+        margin: 10px 20px;
+        padding: 5px 0;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    }
+
+    .navbar-right a:last-child {
+        border-bottom: none;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .side-elements {
+        right: 10px;
+    }
+
+    .side-element {
+        padding: 8px 10px;
+    }
+
+    .side-element img {
+        width: 16px;
+        height: 16px;
+    }
+
+    .star-icon-wrapper {
+    position: fixed;
+    top: 60%;
+    transform: translateY(400%);
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;    
+    .star-icon {
+    height: 30px;
+    width: 30px;
+    }
+    }
+
+    .services {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
 }
