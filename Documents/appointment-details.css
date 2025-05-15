@@ -114,6 +114,24 @@ body {
     font-weight: 700;
 }
 
+.button-div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+.button {
+    font-size: 21px;
+    color: #ffffff;
+    background: #2cb933;
+    padding: 10px 64px;
+    text-align: center;
+    cursor: pointer;
+    height: 50px;
+}
+
 .footer {
     background-color: #5F98B5;
     color: white;
@@ -163,18 +181,7 @@ body {
     align-items: center;
     box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
     cursor: pointer;
-    transition: all 0.3s ease;
-}
-
-.side-element:hover {
-    background-color: #5F98B5;
-    transform: translateX(-5px);
-}
-
-.side-element img {
-    width: 20px;
-    height: 20px;
-    margin-left: 10px;
+    transition: none;
 }
 
 .side-element p {
@@ -192,6 +199,52 @@ body {
     height: 30px;
 }
 
+.star-icon-wrapper {
+    position: fixed;
+    right: 20px;
+    top: 60%;
+    transform: translateY(300%);
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    z-index: 110;
+}
+
+.star-icon {
+    width: 40px;
+    height: 40px;
+}
+
+.feedback-buttons {
+    display: none;
+    position: absolute;
+    right: 100%;
+    top: 50%;
+    transform: translateY(-50%);
+    flex-direction: column;
+    gap: 10px;
+    margin-right: 10px;
+    white-space: nowrap;
+}
+
+.star-icon-wrapper:hover .feedback-buttons {
+    display: flex;
+}
+
+.live-agent-btn,
+.feedback-btn {
+    background-color: #3F6C83;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    font-weight: bold;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    user-select: none;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+}
+
 @media (max-width: 768px) {
     .menu-button {
         display: block;
@@ -207,7 +260,7 @@ body {
         flex-direction: column;
         padding: 10px 0;
         z-index: 100;
-        box-shadow: 0 5px 10px rgba(0,0,0,0.2);
+        box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
     }
 
     .navbar-right.active {
@@ -217,11 +270,16 @@ body {
     .navbar-right a {
         margin: 10px 20px;
         padding: 5px 0;
-        border-bottom: 1px solid rgba(255,255,255,0.2);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.2);
     }
 
     .navbar-right a:last-child {
         border-bottom: none;
+    }
+
+    .footer {
+        display: flex;
+        flex-direction: column;
     }
 
     .side-elements {
@@ -235,6 +293,20 @@ body {
     .side-element img {
         width: 16px;
         height: 16px;
+    }
+
+    .star-icon-wrapper {
+    position: fixed;
+    top: 60%;
+    transform: translateY(400%);
+    display: flex;
+    align-items: center;
+    width: 30px;
+    height: 30px;    
+    .star-icon {
+    height: 30px;
+    width: 30px;
+    }
     }
 
     .table-itself {
