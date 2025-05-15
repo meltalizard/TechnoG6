@@ -7,33 +7,37 @@
     <link rel="stylesheet" href="login.css"> <!-- updated CSS file -->
 </head>
 <body>
-    <!-- Navbar -->
+    <!-- Navbar COmment test -->
     <div class="navbar">
-        <a href="home.html">
-            <img src="../Images/maintitle.png" class="maintitle" alt="Site Title">
-        </a>
+        <div class="navbar-left">
+            <a href="home.html">
+                <img src="../Images/maintitle.png" class="maintitle" alt="Logo">
+            </a>
+        </div>
+        <div class="navbar-right">
+            <a href="home.html">Home</a>
+            <a href="appointment.html">Create an Appointment</a>
+            <a href="helpcenter.html">Help Center</a>
+            <a href="register.html">Sign Up</a>
+            <a href="login.html">Login</a>
+        </div>
     </div>
+    
 
+    <div class="hero">
+        <h1>Login</h1>
+    </div>
     <!-- Main content -->
     <div class="content">
-        <div class="login-description">
-            <p>
-                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Harum repellendus, ratione voluptatum facilis quas repudiandae laboriosam vitae cum nostrum. Quos pariatur optio voluptatibus ea reprehenderit commodi cupiditate quidem quis quae!
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Nobis deserunt assumenda laborum rem ipsa ea quibusdam. Veniam corrupti sit assumenda rem, exercitationem ipsam dolores rerum quaerat est officia quia vel?
-                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Voluptate aliquam possimus recusandae a saepe doloribus blanditiis laboriosam earum quod voluptatibus tempora obcaecati voluptas inventore quos officia alias aliquid, animi facere!
-            </p>
-        </div>
-
         <div class="login-container">
             <h2>Login</h2>
             <form action="#" method="post">
                 <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
-
+                <input type="text" id="username" name="username" required> <br><br>
                 <label for="password">Password:</label>
-                <input type="password" id="password" name="password" required>
+                <input type="password" id="password" name="password" required> <br><br>
 
-                <input type="submit" value="Login">
+                <input type="submit" value="Login" class="button">
             </form>
             <p>Don't have an account? <a href="register.html">Register here</a>.</p>
         </div>

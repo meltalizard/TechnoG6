@@ -22,46 +22,65 @@ body {
     text-decoration: none;
     margin-left: 20px;
     font-size: 18px;
+    transition: color 0.3s;
 }
+
 .maintitle {
     cursor: pointer;
     width: 300px;
     height: auto;
 }
-.hero {
-    text-align: center;
-    padding: 5px;
-    color: #ffffff;
-    background-color: #5F98B5;
-}
 
-.services {
+.profile-box {
+    color: #ffffff;
     display: flex;
     justify-content: center;
-    gap: 20px;
+    gap: 70px;
     padding: 40px;
+    flex-wrap: wrap;
 }
 
-.create-an-appointment {
-    font-size: 17px;
-    background: rgb(255, 242, 213);
+.pet-profile, .user-profile {
+    background: rgba(26, 118, 141, 0.521);
     padding: 20px;
     text-align: center;
     border-radius: 10px;
-    width: 250px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.555);
+    width: 400px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
 }
 
-.register-button {
+.profile-picture {
+    
+    margin: 50px;
+    width: 170px;
+ }
+
+ /* text format */
+
+.deets {
+    text-align: left;
+    height: 40px;
+    width: 200px;
+    font-size: 19px;
+    font-weight: 800;
+
+}
+
+.response {
+    text-align: center;
+    width: 200px;
+    font-size: 19px;
+}
+
+ /* */
+
+.profile-updated {
+    color: rgb(24, 172, 56);
+    font-weight: 900;
     text-align: center;    
 }
 
-.button {
-    font-size: 18px;
-    color: rgb(255, 255, 255);
-    background:rgba(58, 102, 182, 0.555);
-
-}
+ /* footer */
 
 .footer {
     background-color: #5F98B5;

@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Details</title>
+    <link rel="stylesheet" href="appointment-details.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="home.html">
+                <img src="../Images/maintitle.png" class="maintitle" alt="Logo">
+            </a>
+        </div>
+        <div class="menu-button" id="menu-button">
+            <img src="../Images/menuicon.png" alt="Menu">
+        </div>
+        <div class="navbar-right" id="navbar-links">
+            <a href="home.html">Home</a>
+            <a href="appointment.html">Create an Appointment</a>
+            <a href="helpcenter.html">Help Center</a>
+            <a href="login.html">Log out</a>
+        </div>
+    </div>
+    <div class="hero"></div>
+    <div class="table-itself">
+        <div class="first-row">
+            <h2>Appointment Details</h2>
+        </div>
+        <div class="table-body">
+            <div class="row0">
+                <div class="left"><p>Name</p></div>
+                <div class="right"><p>Jarjar</p></div>
+            </div>
+            <div class="row1">
+                <div class="left"><p>E-mail Address</p></div>
+                <div class="right"><p>jarjar@email.com</p></div>
+            </div>
+            <!-- Add more rows as needed -->
+        </div>
+    </div>
+   
+    <div class="footer">
+        <p>&copy; 2025 Pet Care Services. All rights reserved.</p>
+        <a href="facebook.com/Paws-and-Purposes">
+            <img src="../Images/fb-logo.png" class="fb-logo" title="fb-logo">
+        </a>
+        <a href="github.com/TechnoG6">
+            <img src="../Images/githublogo.png" class="fb-logo" title="github-logo">
+            <a href="https://github.com/meltalizard/TechnoG6">
+        </a>
+    </div>
+    
+    <!-- Side elements for Live Agent and Feedback -->
+    <div class="side-elements">
+        <div class="side-element">
+            <p>Live Agent</p>
+            <img src="../Images/headphonelogo.png" alt="Live Agent">
+            <
+        </div>
+        <div class="side-element">
+            <p>Feedback</p>
+            <img src="../Images/staricon.png" alt="Feedback">
+        </div>
+    </div>
+   
+    <script>
+        // JavaScript to toggle mobile menu
+        document.getElementById('menu-button').addEventListener('click', function() {
+            document.getElementById('navbar-links').classList.toggle('active');
+        });
+       
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menuButton = document.getElementById('menu-button');
+            const navbarLinks = document.getElementById('navbar-links');
+           
+            if (!menuButton.contains(event.target) && !navbarLinks.contains(event.target)) {
+                navbarLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

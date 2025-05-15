@@ -1,0 +1,164 @@
+html, body {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('../Images/mainbackground.png') repeat;
+    background-color: #f8f9fa;
+}
+
+/* Wrapper for full height layout */
+.wrapper {
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.navbar {
+    background-color: #3F6C83;
+    padding: 10px 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    position: relative;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar-right {
+    display: flex;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 15px;
+    font-size: 16px;
+}
+
+.maintitle {
+    cursor: pointer;
+    width: 200px;
+    max-width: 100%;
+    height: auto;
+}
+
+.hamburger-menu {
+    display: none;
+    color: white;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 5px;
+}
+
+.title {
+    text-align: center;
+    width: 100%;
+}
+
+.hero {
+    width: 100%;
+    max-width: 400px;
+    height: auto;
+}
+
+.menu-options {
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    padding: 10px;
+    flex-wrap: wrap;
+}
+
+.options {
+    margin: 8px;
+    background: white;
+    padding: 15px;
+    text-align: center;
+    border-radius: 10px;
+    height: auto;
+    min-height: 180px;
+    width: 160px;
+    box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+}
+
+.options a {
+    text-decoration: none;
+    color: inherit;
+}
+
+.option-image {
+    width: 100%;
+    max-width: 118px;
+    height: auto;
+}
+
+.footer {
+    background-color: #2f6f89;
+    color: white;
+    text-align: center;
+    padding: 10px 0;
+    margin-top: auto;
+}
+
+/* Mobile responsive styles */
+@media screen and (max-width: 768px) {
+    .hamburger-menu {
+        display: block;
+    }
+    
+    .navbar-right {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        flex-direction: column;
+        background-color: #3F6C83;
+        padding: 10px 0;
+        z-index: 100;
+        box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    }
+    
+    .navbar-right.active {
+        display: flex;
+    }
+    
+    .navbar-right a {
+        padding: 10px 15px;
+        margin: 0;
+        width: 100%;
+        text-align: left;
+        border-bottom: 1px solid rgba(255,255,255,0.1);
+    }
+    
+    .navbar-right a:last-child {
+        border-bottom: none;
+    }
+    
+    .hamburger-menu.active i:before {
+        content: "\f00d";  /* Font Awesome 'times' icon */
+    }
+    
+    .maintitle {
+        width: 180px;
+    }
+    
+    .menu-options {
+        gap: 10px;
+        padding: 5px;
+    }
+    
+    .options {
+        width: 140px;
+        min-height: 160px;
+        margin: 5px;
+    }
+    
+    .option-image {
+        max-width: 100px;
+    }
+}

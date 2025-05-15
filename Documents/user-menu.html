@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pet Care | Home</title>
+    <link rel="stylesheet" href="user-menu.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+    <div class="wrapper">
+        <div class="navbar">
+            <div class="navbar-left">
+                <a href="home.html">
+                    <img src="../Images/maintitle.png" class="maintitle" alt="Logo" title="Pet Care Services Logo">
+                </a>
+            </div>
+            <div class="hamburger-menu">
+                <i class="fas fa-bars"></i>
+            </div>
+            <div class="navbar-right">
+                <a href="home.html" title="Home Page">Home</a>
+                <a href="appointment.html" title="Schedule an Appointment">Create an Appointment</a>
+                <a href="helpcenter.html" title="Get Help">Help Center</a>
+                <a href="login.html" title="Log out of your account">Log out</a>
+            </div>
+        </div>
+    <div>
+        <div class="title">
+            <img src="../Images/maintitle.png" class="hero" alt="Pet Care Hero Image" title="Pet Care Services">
+        </div>
+        <div class="menu-options">
+            <div class="options">
+                <a href="appointment.html" title="Schedule a new appointment">
+                    <img src="../Images/cat1.png" class="option-image" alt="Cat Icon" title="Create an Appointment">
+                    <h3>Create an Appointment</h3>
+                </a>
+            </div>
+            <div class="options">
+                <a href="pet-user-details.html" title="View and edit your details">
+                    <img src="../Images/Dog1.png" class="option-image" alt="Dog Icon" title="Pet & User details">
+                    <h3>Pet & User details</h3>
+                </a>
+            </div>
+            <div class="options">
+                <a href="appointment-history.html" title="View your appointment history">
+                    <img src="../Images/girlIcon.png" class="option-image" alt="User Icon" title="Appointment History">
+                    <h3>Appointment History</h3>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="social-media">
+    </div>
+    <div class="footer">
+        <p>&copy; 2025 Pet Care Services. All rights reserved.</p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const hamburgerMenu = document.querySelector('.hamburger-menu');
+        const navbarRight = document.querySelector('.navbar-right');
+        
+        hamburgerMenu.addEventListener('click', function() {
+            navbarRight.classList.toggle('active');
+            hamburgerMenu.classList.toggle('active');
+        });
+    });
+</script>
+</body>
+</html>

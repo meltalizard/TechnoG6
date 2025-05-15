@@ -7,42 +7,64 @@
     <link rel="stylesheet" href="register.css">
 </head>
 <body>
-    <!-- Navbar  -->
+    <!-- Navbar Comment test -->
     <div class="navbar">
-        <a href="home.html">
-            <img src="../Images/maintitle.png" class="maintitle" alt="Site Title">
-        </a>
+        <div class="navbar-left">
+            <a href="home.html">
+                <img src="../Images/maintitle.png" class="maintitle" alt="Logo">
+            </a>
+        </div>
+        <div class="navbar-right">
+            <a href="home.html">Home</a>
+            <a href="appointment.html">Create an Appointment</a>
+            <a href="helpcenter.html">Help Center</a>
+            <a href="register.html">Sign Up</a>
+            <a href="login.html">Login</a>
+        </div>
+    </div>
+    
+
+    <div class="hero">
+        <h1>Sign Up</h1>
     </div>
 
     <!-- Main content -->
     <div class="content">
         <!-- Optional description image -->
         <div class="register-description">
-            <img src="../Images/Dog1.png" alt="Dog Image">
+            <img src="../Images/maintitle.png" class="maintitle" alt="Logo">
+            <p>Paws and Purposes aims to create a world where managing pet care is simple and accessible. Our core mission is to empower pet owners by offering an easy-to-use online platform that streamlines appointment booking, guaranteeing every pet receives timely and quality care.
+            </p>
+            <p>
+            We are committed to strengthening the relationship between pets and their owners by prioritizing convenience, accessibility, and excellent service.
+            Our company strives to make pet care a positive and stress-free experience for everyone.Paws and Purposes is dedicated to building a digital site that supports pet owners in every aspect of pet care, creating a more caring and connected world for pets and their families.
+            </p>
         </div>
 
         <!-- Register form -->
         <div class="register-container">
             <h2>Register</h2>
+            <hr>
+            <br>
             <form action="register.php" method="post">
-                <label for="username">Username</label>
-                <input type="text" id="username" name="username" required>
+                <label for="username">Username<br></label>
+                <input type="text" id="username" name="username" required> <br> <br>
 
-                <label for="email">Email</label>
-                <input type="email" id="email" name="email" required>
+                <label for="email">Email<br></label>
+                <input type="email" id="email" name="email" required> <br> <br>
 
-                <label for="phone">Phone Number</label>
-                <input type="tel" id="phone" name="phone" required>
+                <label for="phone">Phone Number<br></label>
+                <input type="tel" id="phone" name="phone" required> <br> <br>
 
-                <label for="password">Password</label>
-                <input type="password" id="password" name="password" required>
+                <label for="password">Password<br></label>
+                <input type="password" id="password" name="password" required> <br> <br>
 
-                <label for="confirm-password">Confirm Password</label>
-                <input type="password" id="confirm-password" name="confirm-password" required>
+                <label for="confirm-password">Confirm Password<br></label>
+                <input type="password" id="confirm-password" name="confirm-password" required> <br> <br>
 
-                <input type="submit" value="Register">
+                <input type="submit" value="Register" class="button">
             </form>
-            <p>Already have an account? <a href="login.html">Login here</a>.</p>
+            <p>Already have an account? <a href="login.html" >Login here</a>.</p>
         </div>
     </div>
 
