@@ -1,35 +1,36 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Pet Care | Home</title>
-    <link rel="stylesheet" href="home.css">
+    <link rel="stylesheet" href="home.css" />
 </head>
 <body>
     <div class="wrapper">
         <div class="navbar">
             <div class="navbar-left">
                 <a href="home.html">
-                    <img src="../Images/maintitle.png" class="maintitle" alt="Logo">
+                    <img src="../Images/maintitle.png" class="maintitle" alt="Logo" />
                 </a>
             </div>
-            <div class="navbar-right">
-                <a href="home.html">Home</a>
-                <a href="appointment.html">Create an Appointment</a>
-                <a href="helpcenter.html">Help Center</a>
-                <a href="register.html">Sign Up</a>
-                <a href="login.html">Login</a>
+            <div class="menu-button" id="menu-button">
+                <img src="../Images/hamburger-symbol.PNG" alt="Menu" />
+            </div>
+            <div class="navbar-right" id="navbar-links">
+            <a href="home.html">Home</a>
+            <a href="appointment.html">Create an Appointment</a>
+            <a href="helpcenter.html">Help Center</a>
+            <a href="register.html">Sign Up</a>
+            <a href="login.html">Login</a>
             </div>
         </div>
-<div>
-    <img src="" class="pet-design" title="Petd-design">
-</div>
+
         <div class="hero">
             <h1>Welcome to Pet Care Services</h1>
             <p>Your pet's health and happiness is our priority!</p>
         </div>
-<div class="pet-design"></div>
+        <div class="pet-design"></div>
         <div class="services">
             <div class="service-box">
                 <h2>Grooming</h2>
@@ -46,22 +47,49 @@
         </div>
 
         <div class="footer">
-            <p>&copy; 2025 Pet Care Services. All rights reserved.</p>
-            <a href="facebook.com/Paws-and-Purposes">
-                <img src="../Images/fb-logo.png" class="fb-logo" title="fb-logo">
-            </a>
-            <a href="github.com/TechnoG6">
-                <img src="../Images/githublogo.png" class="fb-logo" title="github-logo">
-            </a>
+            <div>
+                <p>&copy; 2025 Pet Care Services. All rights reserved.</p>
+            </div>
+            <div>
+                <a href="facebook.com/Paws-and-Purposes">
+                <img src="../Images/fb-logo.png" class="fb-logo" title="fb-logo" />
+                </a>
+                <a href="github.com/TechnoG6">
+                <img src="../Images/githublogo.png" class="fb-logo" title="github-logo" />
+                </a>
+            </div>
         </div>
 
-         <div class="side-elements">
-        <div class="side-element">
-            <p>Live Agent</p>
-            <img src="../Images/headphonelogo.png" alt="Live Agent">
-            <p>Feedback</p>
-            <img src="../Images/staricon.png" alt="Feedback">
-        </div>
+<div class="side-elements">
+  <div class="side-element star-icon-wrapper">
+    <img src="../Images/staricon.png" alt="Feedback" class="star-icon">
+    <div class="feedback-buttons">
+      <div class="side-element live-agent-btn">
+        <p>Live Agent</p>
+      </div>
+      <div class="side-element feedback-btn">
+        <p>Feedback</p>
+      </div>
     </div>
+  </div>
+</div>
+
+
+    </div>
+
+    <script>
+        document.getElementById('menu-button').addEventListener('click', function () {
+            document.getElementById('navbar-links').classList.toggle('active');
+        });
+
+        document.addEventListener('click', function (event) {
+            const menuButton = document.getElementById('menu-button');
+            const navbarLinks = document.getElementById('navbar-links');
+
+            if (!menuButton.contains(event.target) && !navbarLinks.contains(event.target)) {
+                navbarLinks.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>

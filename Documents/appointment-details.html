@@ -14,7 +14,7 @@
             </a>
         </div>
         <div class="menu-button" id="menu-button">
-            <img src="../Images/menuicon.png" alt="Menu">
+            <img src="../Images/hamburger-symbol.PNG" alt="Menu">
         </div>
         <div class="navbar-right" id="navbar-links">
             <a href="home.html">Home</a>
@@ -101,43 +101,50 @@
                 <!-- Add more rows as needed -->
             </div>
         </div>
+            <div class="button-div">
+                <input type="submit" value="Confrim" class="button">
+                <p>2 of 2</p>
+            </div>
+        <br><br>
     </div>
    
-    <div class="footer">
-        <p>&copy; 2025 Pet Care Services. All rights reserved.</p>
-        <div>
-            <a href="https://facebook.com/Paws-and-Purposes" target="_blank">
-                <img src="../Images/fb-logo.png" class="fb-logo" title="fb-logo" alt="Facebook">
-            </a>
-            <a href="https://github.com/TechnoG6" target="_blank">
-                <img src="../Images/githublogo.png" class="fb-logo" title="github-logo" alt="GitHub">
-            </a>
+<div class="footer">
+            <div>
+                <p>&copy; 2025 Pet Care Services. All rights reserved.</p>
+            </div>
+            <div>
+                <a href="facebook.com/Paws-and-Purposes">
+                <img src="../Images/fb-logo.png" class="fb-logo" title="fb-logo" />
+                </a>
+                <a href="github.com/TechnoG6">
+                <img src="../Images/githublogo.png" class="fb-logo" title="github-logo" />
+                </a>
+            </div>
         </div>
-    </div>
-   
-    <!-- Side elements for Live Agent and Feedback -->
+
     <div class="side-elements">
-        <div class="side-element">
-            <p>Live Agent</p>
-            <img src="../Images/headphonelogo.png" alt="Live Agent">
-        </div>
-        <div class="side-element">
-            <p>Feedback</p>
-            <img src="../Images/staricon.png" alt="Feedback">
-        </div>
+  <div class="side-element star-icon-wrapper">
+    <img src="../Images/staricon.png" alt="Feedback" class="star-icon">
+    <div class="feedback-buttons">
+      <div class="side-element live-agent-btn">
+        <p>Live Agent</p>
+      </div>
+      <div class="side-element feedback-btn">
+        <p>Feedback</p>
+      </div>
     </div>
-   
-    <script>
-        // JavaScript to toggle mobile menu
-        document.getElementById('menu-button').addEventListener('click', function() {
+  </div>
+</div>
+
+        <script>
+        document.getElementById('menu-button').addEventListener('click', function () {
             document.getElementById('navbar-links').classList.toggle('active');
         });
-       
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
+
+        document.addEventListener('click', function (event) {
             const menuButton = document.getElementById('menu-button');
             const navbarLinks = document.getElementById('navbar-links');
-           
+
             if (!menuButton.contains(event.target) && !navbarLinks.contains(event.target)) {
                 navbarLinks.classList.remove('active');
             }
