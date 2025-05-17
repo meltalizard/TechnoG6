@@ -60,10 +60,10 @@ html, body {
 .options {
     margin: 9px;
     background: white;
-    padding: 19px; /* Fixed the typo from '19x' to '19px' */
+    padding: 19px;
     text-align: center;
     border-radius: 10px;
-    height: auto; /* Changed from fixed height to auto */
+    height: auto;
     width: 200px;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
 }
@@ -117,10 +117,29 @@ html, body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    margin-top: 15px;
 }
 
 .add-pet-btn:hover {
     background-color: #2f6f89;
+}
+
+/* Toggle button for user information */
+.toggle-btn {
+    background-color: #5F98B5;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px auto;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #3F6C83;
 }
 
 .footer {
@@ -133,11 +152,9 @@ html, body {
 
 .details-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
-    flex-wrap: wrap; /* Allows responsive stacking on small screens */
 }
 
 .user-details, .pet-details {
@@ -145,18 +162,25 @@ html, body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 800px;
+    margin-bottom: 20px;
 }
 
-.user-details {
-    flex: 1;
-    max-width: 40%;
-    min-width: 300px;
-}
-
+/* Prioritize pet details */
 .pet-details {
-    flex: 2;
-    max-width: 60%;
-    min-width: 300px;
+    order: 1;
+}
+
+/* User details (toggle-able) */
+.user-details {
+    order: 3;
+    transition: all 0.3s ease;
+}
+
+/* Toggle button position */
+#toggle-user-info {
+    order: 2;
 }
 
 .details-card, .pet-card {
@@ -213,4 +237,11 @@ html, body {
 .side-element p {
     margin: 0;
     font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .user-details, .pet-details {
+        width: 95%;
+    }
 }
