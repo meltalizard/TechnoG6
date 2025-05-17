@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Care | Home</title>
     <link href="appointment.css" rel="stylesheet" type="text/css">
+    <script src="appointment.js" defer></script>
 </head>
 <body>
     <div class="navbar">
@@ -24,118 +25,141 @@
         </div>
     </div>
     
+    <!-- Section 1: Service Selection -->
+    <div id="section1">
+        <h1>
+            What type of service do you need?
+        </h1>
+        <div class="services">
+            <div class="service-options">
+                <div class="service-option">
+                    <input type="radio" id="Grooming" name="service" value="Grooming">
+                    <label for="Grooming">Grooming</label>
+                </div>
+                <div class="service-option">
+                    <input type="radio" id="VeterinaryCare" name="service" value="Veterinary Care">
+                    <label for="VeterinaryCare">Veterinary Care</label>
+                </div>
+                <div class="service-option">
+                    <input type="radio" id="TrainingService" name="service" value="Training Service">
+                    <label for="TrainingService">Training Service</label>
+                </div>
+                <div class="service-option">
+                    <input type="radio" id="PetTransfer" name="service" value="Pet Transfer">
+                    <label for="PetTransfer">Pet Transfer</label>
+                </div>
+                <div class="service-option">
+                    <input type="radio" id="PetPhotography" name="service" value="Pet Photography">
+                    <label for="PetPhotography">Pet Photography</label>
+                </div>
+            </div>
 
-    <div class="hero">
-        <h1>Create an Appointment</h1>
-    </div>
-    <form action="register_and_schedule.php" method="POST">
-    <div class="services">
-        <div class="create-an-appointment">
-            <label for="username">Username:</label><br>
-            <input type="text" id="username" name="username" required><br><br>
+            <div class="next-button">
+                <button type="button" onclick="showSection(2)">Next</button>
+            </div>
 
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br><br>
-
-            <label for="pnumber">Phone Number:</label><br>
-            <input type="text" id="pnumber" name="pnumber" required><br><br>
-
-            <label for="password">Password:</label><br>
-            <input type="password" id="password" name="password" required><br><br>
-
-            <label for="street_address">Street Address:</label><br>
-            <input type="text" id="street_address" name="street_address" required><br><br>
-
-            <label for="apartment_unit_suite">Apartment/Unit/Suite (Optional):</label><br>
-            <input type="text" id="apartment_unit_suite" name="apartment_unit_suite"><br><br>
-
-            <label for="barangay">Barangay:</label><br>
-            <input type="text" id="barangay" name="barangay" required><br><br>
+            <p class="section-indicator">
+                1 of 2
+            </p>
         </div>
-        <div class="create-an-appointment">
-            <label for="city_municipality">City / Municipality:</label><br>
-            <input type="text" id="city_municipality" name="city_municipality" required><br><br>
+    </div>
 
-            <label for="province">Province:</label><br>
-            <input type="text" id="province" name="province" required><br><br>
+    <!-- Section 2: Appointment Details -->
+    <div id="section2">
+        <div class="hero">
+            <h1>Create an Appointment</h1>
+        </div>
+        <form id="appointmentForm" action="register_and_schedule.php" method="POST">
+            <div class="details">
+                <div class="create-an-appointment">
+                    <label for="username">Username:</label><br>
+                    <input type="text" id="username" name="username" required><br><br>
 
-            <label for="postal_code">Postal Code:</label><br>
-            <input type="text" id="postal_code" name="postal_code" required><br><br>
+                    <label for="email">Email:</label><br>
+                    <input type="email" id="email" name="email" required><br><br>
 
-            <label for="appointment_date">Appointment Date:</label><br>
-            <input type="datetime-local" id="appointment_date" name="appointment_date" required><br><br>
+                    <label for="pnumber">Phone Number:</label><br>
+                    <input type="text" id="pnumber" name="pnumber" required><br><br>
 
-            <label for="description">Description:</label><br>
-            <textarea id="description" name="description" required></textarea><br><br>
+                    <label for="password">Password:</label><br>
+                    <input type="password" id="password" name="password" required><br><br>
 
-            <label for="Location">Select Location: </label><br>
-            <select id="Location" name="Location" required>
-                <option value="Location 1">Pasig/option>
-                <option value="Location 2">Cainta</option>
-                <option value="Location 3">Taytay</option>
-            </select>
+                    <label for="street_address">Street Address:</label><br>
+                    <input type="text" id="street_address" name="street_address" required><br><br>
+
+                    <label for="apartment_unit_suite">Apartment/Unit/Suite (Optional):</label><br>
+                    <input type="text" id="apartment_unit_suite" name="apartment_unit_suite"><br><br>
+
+                    <label for="barangay">Barangay:</label><br>
+                    <input type="text" id="barangay" name="barangay" required><br><br>
+                </div>
+                <div class="create-an-appointment">
+                    <label for="city_municipality">City / Municipality:</label><br>
+                    <input type="text" id="city_municipality" name="city_municipality" required><br><br>
+
+                    <label for="province">Province:</label><br>
+                    <input type="text" id="province" name="province" required><br><br>
+
+                    <label for="postal_code">Postal Code:</label><br>
+                    <input type="text" id="postal_code" name="postal_code" required><br><br>
+
+                    <label for="appointment_date">Appointment Date:</label><br>
+                    <input type="datetime-local" id="appointment_date" name="appointment_date" required><br><br>
+
+                    <label for="description">Description:</label><br>
+                    <textarea id="description" name="description" required></textarea><br><br>
+
+                    <label for="Location">Select Location: </label><br>
+                    <select id="Location" name="Location" required>
+                        <option value="Location 1">Pasig</option>
+                        <option value="Location 2">Cainta</option>
+                        <option value="Location 3">Taytay</option>
+                    </select>
+                    <br><br>
+                    <label for="clinic">Select Clinic: </label><br>
+                    <select id="clinic" name="clinic" required>
+                        <option value="Clinic 1">Clinic 1</option>
+                        <option value="Clinic 2">Clinic 2</option>
+                        <option value="Clinic 3">Clinic 3</option>
+                        <option value="Clinic 4">Clinic 4</option>
+                        <option value="Clinic 5">Clinic 5</option>
+                    </select><br><br>
+                </div>
+            </div>
+            <div class="register-button">
+                <input type="button" value="Register and Schedule Appointment" class="button" onclick="redirectToAppointmentHistory()">
+                <p class="section-indicator">2 of 2</p>
+            </div>
             <br><br>
-            <label for="clinic">Select Clinic: </label><br>
-            <select id="clinic" name="clinic" required>
-                <option value="Clinic 1">Clinic 1</option>
-                <option value="Clinic 2">Clinic 2</option>
-                <option value="Clinic 3">Clinic 3</option>
-                <option value="Clinic 4">Clinic 4</option>
-                <option value="Clinic 5">Clinic 5</option>
-            </select><br><br>
-        </div>
+        </form>
     </div>
-    <div class="register-button">
-        <a href="appointment-details.html">
-        <input type="submit" value="Register and Schedule Appointment" class="button">
-        </a>
-        <p>1 of 2</p>
-    </div>
-    <br><br>
-</form>
 
-        <div class="footer">
-            <div>
-                <p>&copy; 2025 Pet Care Services. All rights reserved.</p>
-            </div>
-            <div>
-                <a href="facebook.com/Paws-and-Purposes">
-                <img src="../Images/fb-logo.png" class="fb-logo" title="fb-logo" />
-                </a>
-                <a href="github.com/TechnoG6">
-                <img src="../Images/githublogo.png" class="fb-logo" title="github-logo" />
-                </a>
-            </div>
+    <div class="footer">
+        <div>
+            <p>&copy; 2025 Pet Care Services. All rights reserved.</p>
         </div>
+        <div>
+            <a href="facebook.com/Paws-and-Purposes">
+            <img src="../Images/fb-logo.png" class="fb-logo" title="fb-logo" />
+            </a>
+            <a href="github.com/TechnoG6">
+            <img src="../Images/githublogo.png" class="fb-logo" title="github-logo" />
+            </a>
+        </div>
+    </div>
 
     <div class="side-elements">
-  <div class="side-element star-icon-wrapper">
-    <img src="../Images/staricon.png" alt="Feedback" class="star-icon">
-    <div class="feedback-buttons">
-      <div class="side-element live-agent-btn">
-        <p>Live Agent</p>
-      </div>
-      <div class="side-element feedback-btn">
-        <p>Feedback</p>
-      </div>
+        <div class="side-element star-icon-wrapper">
+            <img src="../Images/staricon.png" alt="Feedback" class="star-icon">
+            <div class="feedback-buttons">
+                <div class="side-element live-agent-btn">
+                    <p>Live Agent</p>
+                </div>
+                <div class="side-element feedback-btn">
+                    <p>Feedback</p>
+                </div>
+            </div>
+        </div>
     </div>
-  </div>
-</div>
-
-        <script>
-        document.getElementById('menu-button').addEventListener('click', function () {
-            document.getElementById('navbar-links').classList.toggle('active');
-        });
-
-        document.addEventListener('click', function (event) {
-            const menuButton = document.getElementById('menu-button');
-            const navbarLinks = document.getElementById('navbar-links');
-
-            if (!menuButton.contains(event.target) && !navbarLinks.contains(event.target)) {
-                navbarLinks.classList.remove('active');
-            }
-        });
-    </script>
 </body>
-
 </html>
