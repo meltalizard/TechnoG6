@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: url('../Images/mainbackground.png') repeat;
+    background-color: #ffffff;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    width: 100%;
+    flex: 1;
+}
+
+.navbar {
+    background-color: #3F6C83;
+    padding: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.navbar-left {
+    display: flex;
+    align-items: center;
+}
+
+.navbar a {
+    color: white;
+    text-decoration: none;
+    margin-left: 20px;
+    font-size: 18px;
+}
+
+.maintitle {
+    cursor: pointer;
+    width: 300px;
+    height: auto;
+}
+
+.hero {
+    color: #ffffff;
+    font-size: 12px;
+    text-align: center;
+    padding: 5px;
+    background-color: #5F98B5;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    padding: 40px;
+    flex: 1;
+}
+
+.login-container {
+    display: flex;
+    font-size: 15px;
+    padding: 20px;
+    justify-items: center;
+    width: 240px;
+}
+
+.green-check {
+    width: 250px;
+}
+
+.appointment-created {
+    font-weight: 800;
+}
+
+.button {
+    font-size: 18px;
+    color: rgb(255, 255, 255);
+    background:#3F6C83;
+    padding-inline: 64px;
+}
+
+.footer {
+    background-color: #5F98B5;
+    color: white;
+    text-align: center;
+    padding: 15px;
+    margin-top: auto;
+    width: 100%;
+}
+
+/* Media queries for responsive design */
+@media screen and (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        padding: 10px;
+    }
+    
+    .navbar-right {
+        margin-top: 10px;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+    
+    .navbar a {
+        margin: 5px 10px;
+        font-size: 16px;
+    }
+    
+    .maintitle {
+        width: 250px;
+    }
+    
+    .content {
+    }
+    
+.pet-group {
+    width: 150px;
+}
+
+.green-check {
+    width: 150px;
+}
+
+    .login-container {
+    display: flex;
+    font-size: 15px;
+    padding: 20px;
+    justify-items: center;
+    width: 240px;
+    }
+}
