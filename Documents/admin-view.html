@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Appointment Details</title>
+    <link rel="stylesheet" href="adminview.css">
+</head>
+<body>
+    <div class="navbar">
+        <div class="navbar-left">
+            <a href="home.html">
+                <img src="../Images/maintitle.png" class="maintitle" alt="Logo">
+            </a>
+        </div>
+        <div class="menu-button" id="menu-button">
+            <img src="../Images/hamburger-symbol.png" alt="Menu">
+        </div>
+        <div class="navbar-right" id="navbar-links">
+            <a href="home.html">Home</a>
+            <a href="appointment.html">Create an Appointment</a>
+            <a href="helpcenter.html">Help Center</a>
+            <a href="login.html">Log out</a>
+        </div>
+    </div>
+    
+    <div class="hero">
+        <h3>Dashboard</h3>
+    </div>
+
+    <div class="wrapper">
+        <div class="whole-dashboard">
+            <div class="left">
+                <div class="dashboard">
+                    <h3>Dashboard</h3>
+                    <div class="dashboard-cat">
+                        <a href="">Forms</a>
+                        <a href="">Tables</a>
+                        <a href="">Charts</a>
+                    </div>
+                </div>
+                <br><br>
+                <div>
+                    <h3>Pages</h3>
+                    <div class="dashboard-cat">
+                        <a href="">Registers</a>
+                        <a href="">Log Ins</a>
+                        <a href="">Feedback</a>
+                        <a href="">Errors</a>
+                        <a href="">Help</a>
+                    </div>
+                </div>
+            </div>
+            <div class="middle">
+                <div class="first-row">
+                    <div class="visits">
+                        Visits</div>
+                    <div class="new-user">
+                        New User</div>
+                </div>
+                <div class="second-row">
+                    <div class="log-ins">
+                        Log Ins</div>
+                    <div class="appointments">
+                        Appointments</div>
+                </div>
+                <div class="third-row">
+                    <div class="revenue">
+                        Revenue
+                    </div>
+                </div>
+            </div>
+            <div class="right">
+                <div class="dashboard">
+                    <h3>Latest Activity</h3>
+                    <div class="dashboard-cat">
+                        <a href="">Forms</a>
+                        <a href="">Tables</a>
+                        <a href="">Charts</a>
+                    </div>
+                </div>
+                <br><br>
+                <div>
+                    <h3>Customer Messages</h3>
+                    <div class="dashboard-cat">
+                        <a href="">Registers</a>
+                        <a href="">Log Ins</a>
+                        <a href="">Feedback</a>
+                        <a href="">Errors</a>
+                        <a href="">Help</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+   
+    <div class="footer">
+        <p>&copy; 2025 Pet Care Services. All rights reserved.</p>
+        <div>
+            <a href="https://facebook.com/Paws-and-Purposes" target="_blank">
+                <img src="../Images/fb-logo.png" class="fb-logo" title="fb-logo" alt="Facebook">
+            </a>
+            <a href="https://github.com/TechnoG6" target="_blank">
+                <img src="../Images/githublogo.png" class="fb-logo" title="github-logo" alt="GitHub">
+            </a>
+        </div>
+    </div>
+
+    <script>
+        // JavaScript to toggle mobile menu
+        document.getElementById('menu-button').addEventListener('click', function() {
+            document.getElementById('navbar-links').classList.toggle('active');
+        });
+       
+        // Close menu when clicking outside
+        document.addEventListener('click', function(event) {
+            const menuButton = document.getElementById('menu-button');
+            const navbarLinks = document.getElementById('navbar-links');
+           
+            if (!menuButton.contains(event.target) && !navbarLinks.contains(event.target)) {
+                navbarLinks.classList.remove('active');
+            }
+        });
+    </script>
+</body>
+</html>

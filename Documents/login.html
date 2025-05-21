@@ -4,48 +4,84 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login</title>
-    <link rel="stylesheet" href="login.css"> <!-- updated CSS file -->
+    <link rel="stylesheet" href="login.css">
 </head>
 <body>
-    <!-- Navbar COmment test -->
+    <!-- Navbar -->
     <div class="navbar">
-        <div class="navbar-left">
-            <a href="home.html">
-                <img src="../Images/maintitle.png" class="maintitle" alt="Logo">
-            </a>
-        </div>
-        <div class="navbar-right">
+            <div class="navbar-left">
+                <a href="home.html">
+                    <img src="../Images/maintitle.png" class="maintitle" alt="Logo" />
+                </a>
+            </div>
+            <div class="menu-button" id="menu-button">
+                <img src="../Images/hamburger-symbol.PNG" alt="Menu" />
+            </div>
+            <div class="navbar-right" id="navbar-links">
             <a href="home.html">Home</a>
             <a href="appointment.html">Create an Appointment</a>
             <a href="helpcenter.html">Help Center</a>
             <a href="register.html">Sign Up</a>
             <a href="login.html">Login</a>
+            </div>
         </div>
-    </div>
-    
-
     <div class="hero">
         <h1>Login</h1>
     </div>
     <!-- Main content -->
     <div class="content">
         <div class="login-container">
-            <h2>Login</h2>
-            <form action="#" method="post">
+            <form action="user-home.html" method="post">
                 <label for="username">Username:</label>
                 <input type="text" id="username" name="username" required> <br><br>
                 <label for="password">Password:</label>
                 <input type="password" id="password" name="password" required> <br><br>
-
-                <input type="submit" value="Login" class="button">
+                <a href="user-home.html">
+                    <input type="button" value="Login" class="button">
+                </a>
+               
             </form>
             <p>Don't have an account? <a href="register.html">Register here</a>.</p>
         </div>
     </div>
-
     <!-- Footer -->
-    <footer class="footer">
-        <p>&copy; 2025 PetCare. All rights reserved.</p>
-    </footer>
+    <div class="footer">
+            <div>
+                <p>&copy; 2025 Pet Care Services. All rights reserved.</p>
+            </div>
+            <div>
+                <a href="facebook.com/Paws-and-Purposes">
+                <img src="../Images/fb-logo.png" class="fb-logo" title="fb-logo" />
+                </a>
+                <a href="github.com/TechnoG6">
+                <img src="../Images/githublogo.png" class="fb-logo" title="github-logo" />
+                </a>
+            </div>
+        </div>
+<div class="side-elements">
+  <div class="side-element star-icon-wrapper">
+    <img src="../Images/staricon.png" alt="Feedback" class="star-icon">
+    <div class="feedback-buttons">
+      <div class="side-element live-agent-btn">
+        <p>Live Agent</p>
+      </div>
+      <div class="side-element feedback-btn">
+        <p>Feedback</p>
+      </div>
+    </div>
+  </div>
+</div>
+        <script>
+        document.getElementById('menu-button').addEventListener('click', function () {
+            document.getElementById('navbar-links').classList.toggle('active');
+        });
+        document.addEventListener('click', function (event) {
+            const menuButton = document.getElementById('menu-button');
+            const navbarLinks = document.getElementById('navbar-links');
+            if (!menuButton.contains(event.target) && !navbarLinks.contains(event.target)) {
+                navbarLinks.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>

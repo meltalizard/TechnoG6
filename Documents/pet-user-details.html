@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pet Care | Pet & User Details</title>
+    <link rel="stylesheet" href="pet-user-details.css">
     <link rel="stylesheet" href="user-menu.css">
 </head>
 <body>
@@ -27,35 +28,7 @@
         </div>
         
         <div class="details-container">
-            <div class="user-details">
-                <h2>User Information</h2>
-                <div class="details-card">
-                    <img src="../Images/girlIcon.png" class="profile-image" alt="User Profile" title="User Profile">
-                    <div class="info-section">
-                        <div class="info-row">
-                            <span class="label">Name:</span>
-                            <span class="value"></span>
-                            <span class="edit" title="Edit name">✏️</span>
-                        </div>
-                        <div class="info-row">
-                            <span class="label">Email:</span>
-                            <span class="value"></span>
-                            <span class="edit" title="Edit email">✏️</span>
-                        </div>
-                        <div class="info-row">
-                            <span class="label">Phone:</span>
-                            <span class="value"></span>
-                            <span class="edit" title="Edit phone">✏️</span>
-                        </div>
-                        <div class="info-row">
-                            <span class="label">Address:</span>
-                            <span class="value"></span>
-                            <span class="edit" title="Edit address">✏️</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            
+            <!-- Pet Details Section (Now First) -->
             <div class="pet-details">
                 <h2>Pet Information</h2>
                 <div class="pet-card">
@@ -91,13 +64,83 @@
                 
                 <button class="add-pet-btn" title="Add a new pet">+ Add New Pet</button>
             </div>
+            
+            <!-- Toggle Button for User Information -->
+            <button id="toggle-user-info" class="toggle-btn">Show User Information</button>
+            
+            <!-- User Details Section (Now Toggle-able) -->
+            <div class="user-details" id="user-details-section" style="display: none;">
+                <h2>User Information</h2>
+                <div class="details-card">
+                    <img src="../Images/girlIcon.png" class="profile-image" alt="User Profile" title="User Profile">
+                    <div class="info-section">
+                        <div class="info-row">
+                            <span class="label">Name:</span>
+                            <span class="value"></span>
+                            <span class="edit" title="Edit name">✏️</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Email:</span>
+                            <span class="value"></span>
+                            <span class="edit" title="Edit email">✏️</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Phone:</span>
+                            <span class="value"></span>
+                            <span class="edit" title="Edit phone">✏️</span>
+                        </div>
+                        <div class="info-row">
+                            <span class="label">Address:</span>
+                            <span class="value"></span>
+                            <span class="edit" title="Edit address">✏️</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="social-media">
     </div>
     <div class="footer">
         <p>&copy; 2025 Pet Care Services. All rights reserved.</p>
+        <a href="https://facebook.com/Paws-and-Purposes" target="_blank">
+                <img src="../Images/fb-logo.png" class="fb-logo" title="fb-logo" alt="Facebook">
+            </a>
+            <a href="https://github.com/TechnoG6" target="_blank">
+                <img src="../Images/githublogo.png" class="fb-logo" title="github-logo" alt="GitHub">
+            </a>
     </div>
+
+    <!-- Side elements for Live Agent and Feedback -->
+    <div class="side-elements">
+        <div class="side-element">
+            <p>Live Agent</p>
+            <img src="../Images/headphonelogo.png" alt="Live Agent">
+        </div>
+        <div class="side-element">
+            <p>Feedback</p>
+            <img src="../Images/staricon.png" alt="Feedback">
+        </div>
+    </div>
+   
 </div>
+
+<!-- JavaScript for toggle functionality -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const toggleBtn = document.getElementById('toggle-user-info');
+        const userDetailsSection = document.getElementById('user-details-section');
+        
+        toggleBtn.addEventListener('click', function() {
+            if (userDetailsSection.style.display === 'none') {
+                userDetailsSection.style.display = 'block';
+                toggleBtn.textContent = 'Hide User Information';
+            } else {
+                userDetailsSection.style.display = 'none';
+                toggleBtn.textContent = 'Show User Information';
+            }
+        });
+    });
+</script>
 </body>
 </html>

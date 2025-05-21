@@ -9,19 +9,22 @@
 <body>
     <div class="wrapper">
         <div class="navbar">
-            <div class="navbar-left">
-                <a href="home.html">
-                    <img src="../Images/maintitle.png" class="maintitle" alt="Logo">
-                </a>
-            </div>
-            <div class="navbar-right">
-                <a href="home.html">Home</a>
-                <a href="appointment.html">Create an Appointment</a>
-                <a href="helpcenter.html">Help Center</a>
-                <a href="register.html">Sign Up</a>
-                <a href="login.html">Login</a>
-            </div>
+        <div class="navbar-left">
+            <a href="home.html">
+                <img src="../Images/maintitle.png" class="maintitle" alt="Logo">
+            </a>
         </div>
+        <div class="menu-button" id="menu-button">
+            <img src="../Images/hamburger-symbol.PNG" alt="Menu">
+        </div>
+        <div class="navbar-right" id="navbar-links">
+            <a href="home.html">Home</a>
+            <a href="appointment.html">Create an Appointment</a>
+            <a href="helpcenter.html">Help Center</a>
+            <a href="login.html">Log out</a>
+        </div>
+    </div>
+
         <div class="hero">
             <h1>
                 <img src="../Images/help-center-header.PNG" class="help-center-cat" alt="Help-Logo" title="">
@@ -44,29 +47,50 @@
                 <h3>How can I contact support?</h3>
                 <p>You can reach our support team via the contact form on our website.</p>
             </div>
-        </div>        
+        </div>   
+        
+        
         <div class="footer">
-            <p>&copy; 2025 Pet Care Services. All rights reserved.</p>
-            <!-- Palitan yung link later-->
-            <a href="facebook.com/Paws-and-Purposes">
-                <img src="../Images/fb-logo.png" class="fb-logo" title="fb-logo">
-            </a>
-            <a href="github.com/TechnoG6">
-                <img src="../Images/githublogo.png" class="fb-logo" title="github-logo">
-            </a>
+            <div>
+                <p>&copy; 2025 Pet Care Services. All rights reserved.</p>
+            </div>
+            <div>
+                <a href="facebook.com/Paws-and-Purposes">
+                <img src="../Images/fb-logo.png" class="fb-logo" title="fb-logo" />
+                </a>
+                <a href="github.com/TechnoG6">
+                <img src="../Images/githublogo.png" class="fb-logo" title="github-logo" />
+                </a>
+            </div>
         </div>
-    </div>
-   
-    <!-- Side elements for Live Agent and Feedback -->
+
     <div class="side-elements">
-        <div class="side-element">
-            <p>Live Agent</p>
-            <img src="../Images/headphonelogo.png" alt="Live Agent">
-        </div>
-        <div class="side-element">
-            <p>Feedback</p>
-            <img src="../Images/staricon.png" alt="Feedback">
-        </div>
+  <div class="side-element star-icon-wrapper">
+    <img src="../Images/staricon.png" alt="Feedback" class="star-icon">
+    <div class="feedback-buttons">
+      <div class="side-element live-agent-btn">
+        <p>Live Agent</p>
+      </div>
+      <div class="side-element feedback-btn">
+        <p>Feedback</p>
+      </div>
     </div>
+  </div>
+</div>
+
+        <script>
+        document.getElementById('menu-button').addEventListener('click', function () {
+            document.getElementById('navbar-links').classList.toggle('active');
+        });
+
+        document.addEventListener('click', function (event) {
+            const menuButton = document.getElementById('menu-button');
+            const navbarLinks = document.getElementById('navbar-links');
+
+            if (!menuButton.contains(event.target) && !navbarLinks.contains(event.target)) {
+                navbarLinks.classList.remove('active');
+            }
+        });
+    </script>
 </body>
 </html>

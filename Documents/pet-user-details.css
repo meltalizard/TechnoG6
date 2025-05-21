@@ -60,10 +60,10 @@ html, body {
 .options {
     margin: 9px;
     background: white;
-    padding: 19px; /* Fixed the typo from '19x' to '19px' */
+    padding: 19px;
     text-align: center;
     border-radius: 10px;
-    height: auto; /* Changed from fixed height to auto */
+    height: auto;
     width: 200px;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
 }
@@ -117,10 +117,29 @@ html, body {
     border-radius: 5px;
     cursor: pointer;
     font-size: 16px;
+    margin-top: 15px;
 }
 
 .add-pet-btn:hover {
     background-color: #2f6f89;
+}
+
+/* Toggle button for user information */
+.toggle-btn {
+    background-color: #5F98B5;
+    color: white;
+    border: none;
+    padding: 12px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    margin: 20px auto;
+    display: block;
+    transition: background-color 0.3s ease;
+}
+
+.toggle-btn:hover {
+    background-color: #3F6C83;
 }
 
 .footer {
@@ -133,11 +152,9 @@ html, body {
 
 .details-container {
     display: flex;
-    justify-content: space-between;
-    align-items: flex-start;
-    gap: 20px;
+    flex-direction: column;
+    align-items: center;
     padding: 20px;
-    flex-wrap: wrap; /* Allows responsive stacking on small screens */
 }
 
 .user-details, .pet-details {
@@ -145,18 +162,25 @@ html, body {
     padding: 20px;
     border-radius: 10px;
     box-shadow: 2px 2px 10px rgba(0,0,0,0.1);
+    width: 90%;
+    max-width: 800px;
+    margin-bottom: 20px;
 }
 
-.user-details {
-    flex: 1;
-    max-width: 40%;
-    min-width: 300px;
-}
-
+/* Prioritize pet details */
 .pet-details {
-    flex: 2;
-    max-width: 60%;
-    min-width: 300px;
+    order: 1;
+}
+
+/* User details (toggle-able) */
+.user-details {
+    order: 3;
+    transition: all 0.3s ease;
+}
+
+/* Toggle button position */
+#toggle-user-info {
+    order: 2;
 }
 
 .details-card, .pet-card {
@@ -166,4 +190,58 @@ html, body {
 .profile-image, .pet-image {
     width: 100px;
     margin-bottom: 10px;
+}
+
+/* ✅ Social media icons in footer */
+.fb-logo {
+    width: 30px;
+    height: 30px;
+    margin: 0 5px;
+    transition: transform 0.3s ease;
+}
+.fb-logo:hover {
+    transform: scale(1.2);
+}
+
+/* ✅ Side elements container styling */
+.side-elements {
+    position: fixed;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    z-index: 100;
+}
+.side-element {
+    background-color: #3F6C83;
+    color: white;
+    padding: 10px 15px;
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+.side-element:hover {
+    background-color: #5F98B5;
+    transform: translateX(-5px);
+}
+.side-element img {
+    width: 20px;
+    height: 20px;
+    margin-left: 10px;
+}
+.side-element p {
+    margin: 0;
+    font-weight: bold;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .user-details, .pet-details {
+        width: 95%;
+    }
 }

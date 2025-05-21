@@ -14,7 +14,7 @@
             </a>
         </div>
         <div class="menu-button" id="menu-button">
-            <img src="../Images/menuicon.png" alt="Menu">
+            <img src="../Images/hamburger-symbol.PNG" alt="Menu">
         </div>
         <div class="navbar-right" id="navbar-links">
             <a href="home.html">Home</a>
@@ -23,59 +23,130 @@
             <a href="login.html">Log out</a>
         </div>
     </div>
-    <div class="hero"></div>
-    <div class="table-itself">
-        <div class="first-row">
-            <h2>Appointment Details</h2>
-        </div>
-        <div class="table-body">
-            <div class="row0">
-                <div class="left"><p>Name</p></div>
-                <div class="right"><p>Jarjar</p></div>
-            </div>
-            <div class="row1">
-                <div class="left"><p>E-mail Address</p></div>
-                <div class="right"><p>jarjar@email.com</p></div>
-            </div>
-            <!-- Add more rows as needed -->
-        </div>
-    </div>
-   
-    <div class="footer">
-        <p>&copy; 2025 Pet Care Services. All rights reserved.</p>
-        <a href="facebook.com/Paws-and-Purposes">
-            <img src="../Images/fb-logo.png" class="fb-logo" title="fb-logo">
-        </a>
-        <a href="github.com/TechnoG6">
-            <img src="../Images/githublogo.png" class="fb-logo" title="github-logo">
-            <a href="https://github.com/meltalizard/TechnoG6">
-        </a>
-    </div>
     
-    <!-- Side elements for Live Agent and Feedback -->
-    <div class="side-elements">
-        <div class="side-element">
-            <p>Live Agent</p>
-            <img src="../Images/headphonelogo.png" alt="Live Agent">
-            <
+    <div class="hero">
+        <h3>Appointment Information</h3>
+    </div>
+
+    <div class="wrapper">
+        <div class="table-itself">
+            <div class="table-header">
+                <h2>Appointment Details</h2>
+            </div>
+            <div class="table-body">
+                <div class="row0">
+                    <div class="left">
+                        <p>Name</p>
+                    </div>
+                    <div class="right">
+                        <p>Juan Cruz</p>
+                    </div>
+                </div>
+                <div class="row1">
+                    <div class="left">
+                        <p>E-mail Address</p>
+                    </div>
+                    <div class="right">
+                        <p>juancruz@gmail.com</p>
+                    </div>
+                </div>
+                <div class="row0">
+                    <div class="left">
+                        <p>Contact Number</p>
+                    </div>
+                    <div class="right">
+                        <p>0912-345-6789</p>
+                    </div>
+                </div>
+                <div class="row1">
+                    <div class="left">
+                        <p>Appointment Date</p>
+                    </div>
+                    <div class="right">
+                        <p>juancruz@gmail.com</p>
+                    </div>
+                </div>
+                <div class="row0">
+                    <div class="left">
+                        <p>Time</p>
+                    </div>
+                    <div class="right">
+                        <p>02:00 PM</p>
+                    </div>
+                </div>
+                <div class="row1">
+                    <div class="left">
+                        <p>City/Municipality</p>
+                    </div>
+                    <div class="right">
+                        <p>Cainta, Rizal</p>
+                    </div>
+                </div>
+                <div class="row0">
+                    <div class="left">
+                        <p>Appointment Type</p>
+                    </div>
+                    <div class="right">
+                        <p>Animal Clinic</p>
+                    </div>
+                </div>
+                <div class="row1">
+                    <div class="left">
+                        <p>Appointment Location</p>
+                    </div>
+                    <div class="right">
+                        <p>Petlink Veterinary Clinic + Cafe</p>
+                </div>
+                </div>
+                <!-- Add more rows as needed -->
+            </div>
         </div>
-        <div class="side-element">
-            <p>Feedback</p>
-            <img src="../Images/staricon.png" alt="Feedback">
-        </div>
+            <div class="button-div">
+                    <a href="thank-you.html">
+                        <input type="submit" value="Confirm" class="button">
+                    </a>
+                <p>3 of 3</p>
+            </div>
+        <br><br>
     </div>
    
-    <script>
-        // JavaScript to toggle mobile menu
-        document.getElementById('menu-button').addEventListener('click', function() {
+<div class="footer">
+            <div>
+                <p>&copy; 2025 Pet Care Services. All rights reserved.</p>
+            </div>
+            <div>
+                <a href="facebook.com/Paws-and-Purposes">
+                <img src="../Images/fb-logo.png" class="fb-logo" title="fb-logo" />
+                </a>
+                <a href="github.com/TechnoG6">
+                <img src="../Images/githublogo.png" class="fb-logo" title="github-logo" />
+                </a>
+            </div>
+        </div>
+
+    <div class="side-elements">
+  <div class="side-element star-icon-wrapper">
+    <img src="../Images/staricon.png" alt="Feedback" class="star-icon">
+    <div class="feedback-buttons">
+      <div class="side-element live-agent-btn">
+        <p>Live Agent</p>
+      </div>
+      <div class="side-element feedback-btn">
+        <p>Feedback</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+        <script>
+        document.getElementById('menu-button').addEventListener('click', function () {
             document.getElementById('navbar-links').classList.toggle('active');
         });
-       
-        // Close menu when clicking outside
-        document.addEventListener('click', function(event) {
+
+        document.addEventListener('click', function (event) {
             const menuButton = document.getElementById('menu-button');
             const navbarLinks = document.getElementById('navbar-links');
-           
+
             if (!menuButton.contains(event.target) && !navbarLinks.contains(event.target)) {
                 navbarLinks.classList.remove('active');
             }
