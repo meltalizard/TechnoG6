@@ -8,7 +8,6 @@ body {
     display: flex;
     flex-direction: column;
 }
-
 .wrapper {
     display: flex;
     flex-direction: column;
@@ -16,7 +15,6 @@ body {
     width: 100%;
     flex: 1;
 }
-
 .navbar {
     background-color: #3F6C83;
     padding: 15px;
@@ -24,25 +22,21 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-
 .navbar-left {
     display: flex;
     align-items: center;
 }
-
 .navbar a {
     color: white;
     text-decoration: none;
     margin-left: 20px;
     font-size: 18px;
 }
-
 .maintitle {
     cursor: pointer;
     width: 300px;
     height: auto;
 }
-
 .hero {
     color: #ffffff;
     font-size: 12px;
@@ -50,38 +44,46 @@ body {
     padding: 5px;
     background-color: #5F98B5;
 }
-
 .content {
     display: flex;
+    flex-direction: column;
+    align-items: center;
     justify-content: center;
     gap: 20px;
     padding: 40px;
     flex: 1;
 }
-
 .login-container {
     display: flex;
+    flex-direction: row;
     font-size: 15px;
     padding: 20px;
-    justify-items: center;
+    align-items: center;
     width: 240px;
+    margin-left: auto;
+    margin-right: auto;
+    justify-content: center;
+    text-align: center;
 }
-
+.pet-group {
+    width: 300px;
+}
 .green-check {
     width: 250px;
 }
 
 .appointment-created {
     font-weight: 800;
+    font-size: 30px;
 }
 
-.button {
-    font-size: 18px;
-    color: rgb(255, 255, 255);
-    background:#3F6C83;
-    padding-inline: 64px;
+.proceed-button {
+    width: 250px;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    text-align: center;
 }
-
 .footer {
     background-color: #5F98B5;
     color: white;
@@ -91,45 +93,63 @@ body {
     width: 100%;
 }
 
-/* Media queries for responsive design */
 @media screen and (max-width: 768px) {
     .navbar {
         flex-direction: column;
         padding: 10px;
     }
-    
+   
     .navbar-right {
         margin-top: 10px;
         display: flex;
         flex-wrap: wrap;
         justify-content: center;
     }
-    
+   
     .navbar a {
         margin: 5px 10px;
         font-size: 16px;
     }
-    
+   
     .maintitle {
         width: 250px;
     }
-    
+   
     .content {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
-    
-.pet-group {
-    width: 150px;
-}
+   
+    .pet-group {
+        width: 150px;
+    }
 
-.green-check {
-    width: 150px;
+    .green-check {
+        width: 150px;
+    }
+
+    .appointment-created {
+    font-weight: 800;
+    font-size: 30px;
 }
 
     .login-container {
-    display: flex;
-    font-size: 15px;
-    padding: 20px;
-    justify-items: center;
-    width: 240px;
+        display: flex;
+        flex-direction: row;
+        font-size: 15px;
+        padding: 20px;
+        align-items: center;
+        width: 240px;
+        margin-left: auto;
+        margin-right: auto;
+        justify-content: center;
+    }
+    .proceed-button {
+        width: 200px;
+        margin-left: auto;
+        margin-right: auto;
+        display: block;
+        text-align: center;
     }
 }
